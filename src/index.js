@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import tick from "./playground.js";
+import Clock from "./playground.js";
 
 function Square(props) {
     return (
@@ -165,5 +165,5 @@ function calculateWinner(squares) {
 
 // ========================================
 
-ReactDOM.render(<Game/>, document.getElementById('root'));
-tick.tick();
+ReactDOM.render(<Game />, document.getElementById('root'));
+ReactDOM.render(<Clock />, document.getElementById('tick'));
