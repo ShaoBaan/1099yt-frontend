@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Clock from "./playground.js";
+import Todo from "./todo/Todo.js";
 
 function Square(props) {
     return (
@@ -167,3 +168,4 @@ function calculateWinner(squares) {
 
 ReactDOM.render(<Game />, document.getElementById('root'));
 ReactDOM.render(<Clock />, document.getElementById('tick'));
+ReactDOM.render(<Todo />, document.getElementById('todo-list'));
