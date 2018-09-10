@@ -6,6 +6,16 @@ class Item extends React.Component {
         return (
             <li>
                 { this.props.content }
+                <span
+                    onClick = {
+                        (e) => {
+                            let index = this.props.index;
+                            this.props.onClick(index);
+                        }
+                    }
+                >
+                    delete
+                </span>
             </li>
         )
     }

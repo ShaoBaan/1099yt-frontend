@@ -6,13 +6,16 @@ class ItemList extends React.Component {
 
     renderItems() {
         let res = [];
-        res = this.props.itemList.map((item) => {
-            return (
-                <Item
-                    content = { item.content }
-                />
-            )
-        });
+        res = this.props.itemList.map((item) =>
+            <Item
+                content = { item.content }
+                key = { item.index.toString() }
+                index = { item.index.toString() }
+                onClick = {
+                    (key) => this.props.onClick(key)
+                }
+            />
+        );
         return res;
     }
 

@@ -13,34 +13,47 @@ class Todo extends React.Component {
         }
     }
 
-    handleKeyPress(e) {
+    handleAddItem(e) {
         if (e.charCode == 13) {
-            this.addItem(e.target.value);
+            const newList = this.state.itemList;
+            const itemCount = this.state.itemCount;
+            newList.unshift({
+                content: e.target.value,
+                key: itemCount,
+                index: itemCount,
+            });
+            this.setState({
+                itemList: newList,
+                itemCount: itemCount + 1,
+            });
             e.target.value = '';
         }
     }
 
-    addItem(content) {
-        const newList = this.state.itemList;
-        newList.unshift({
-            content: content,
-        });
+    handleDeleteItem(index) {
+        const newList = this.state.itemList.filter(
+            (item) => (item.index != index)
+        );
+
         this.setState({
-            itemList: newList,
-            itemCount: newList.length,
+            itemList: newList
         });
     }
+
 
     render() {
         return (
             <div id = "todo">
                 <NewItem
                     onKeyPress = {
-                        (e) => this.handleKeyPress(e)
+                        (e) => this.handleAddItem(e)
                     }
                 />
                 <ItemList
                     itemList = { this.state.itemList }
+                    onClick = {
+                        (e) => this.handleDeleteItem(e)
+                    }
                 />
             </div>
         )
