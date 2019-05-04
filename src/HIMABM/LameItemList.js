@@ -1,18 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Item from "./Item";
+import LameItem from "./LameItem";
 
-class ItemList extends React.Component {
+class LameItemList extends React.Component {
 
     renderItems() {
         let res = [];
-        res = this.props.itemList.map((item) =>
-            <Item
+        res = this.props.lameItemList.map((item, idx) =>
+            <LameItem
                 content = { item.content }
-                key = { item.index.toString() }
-                index = { item.index.toString() }
+                key = { idx }
+                index = { idx }
                 onClick = {
-                    (key) => this.props.onClick(key)
+                    (e) => { this.props.onBuyOne(e) }
                 }
             />
         );
@@ -28,4 +28,4 @@ class ItemList extends React.Component {
     }
 }
 
-module.exports = ItemList;
+module.exports = LameItemList;

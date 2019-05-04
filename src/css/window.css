@@ -1,0 +1,114 @@
+#HIMIBM {
+    overflow: hidden;
+}
+
+#window {
+    float: left;
+    width: 80%;
+    height: 100vh;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+@keyframes toggle {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.pane {
+    animation-name: toggle;
+    animation-duration: .5s;
+}
+
+.title {
+    color: #2a3a44;
+    display: block;
+    width: 100%;
+    font-size: 48px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    border-bottom: 1px solid #999;
+}
+.entry {
+    padding: 5px;
+    width: 110px;
+    margin-right: 107px;
+    display: inline-block;
+}
+
+.center {
+    padding-left: 18px;
+}
+
+.item {
+    height: 36px;
+    line-height: 36px;
+    background: #DDFeF5;
+    margin: 5px 0;
+    padding: 5px 10px;
+    animation-name: toggle;
+    animation-duration: 1s;
+}
+
+.item:hover {
+    background: #cdfcf0;
+}
+
+.field {
+    display: inline-block;
+    margin-right: 18px;
+    width: 200px;
+}
+
+.add-button, .delete-button {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+    border-radius: 15px;
+}
+
+.number {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    color: red;
+}
+
+.confirm-button {
+    height: 36px;
+    width: 80px;
+    font-size: 14px;
+    color: #84879f;
+    background: #DDFeF5;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px #cdcdcd;
+    cursor: pointer;
+}
+
+.confirm-button:hover {
+    color: #88a0b2;
+}
+
+.content-body {
+    padding: 20px 5px 0;
+}
+
+#window input {
+    font-size: 14px;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    margin-right: 10px;
+    line-height: 30px;
+}
+
+
+#challengeAccepted {
+
+}

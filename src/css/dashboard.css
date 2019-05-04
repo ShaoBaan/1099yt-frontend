@@ -1,0 +1,26 @@
+#dash-board {
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+    height: 100vh;
+    border-right: 1px solid #ccdeef;
+}
+
+.dash-button {
+    color: #9a9d9f;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    width: 140px;
+    margin: 45px auto 30px;
+    height: 140px;
+    line-height: 140px;
+    background: #DAEDDC;
+    border-radius: 70px;
+    transition: background .3s linear;
+}
+
+.dash-button:hover {
+    color: #789a8d;
+    background: #edf0ee;
+}
